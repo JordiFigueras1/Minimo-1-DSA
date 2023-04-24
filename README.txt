@@ -4,4 +4,4 @@
 
 >> PARTE I
 
-Solo he llegado hasta la creación de la interfaz para definir las funciones del juego.
+Solo he llegado hasta la implementación de algunas de  las funciones del juego

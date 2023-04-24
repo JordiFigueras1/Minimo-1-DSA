@@ -8,15 +8,14 @@ public class Equipo {
 
 
     public Equipo() {}
-
-    public Equipo(int cantidadUsuarios) {
+    public Equipo(int tamañoEquipo) {
         this.usuarios = new ArrayList<>();
         this.vidaEquipo = 0;
 
-        for (int i = 0; i < cantidadUsuarios; i++) {
+        for (int i = 0; i < tamañoEquipo; i++) {
             Usuario usuario = new Usuario();
             this.usuarios.add(usuario);
-            this.vidaEquipo += usuario.getUservida();
+            this.vidaEquipo += usuario.getVida();
         }
     }
 
@@ -26,5 +25,9 @@ public class Equipo {
 
     public Integer getVidaEquipo() {
         return this.vidaEquipo;
+    }
+
+    public int getTamañoEquipo() {
+        return this.usuarios.size();
     }
 }

@@ -1,22 +1,22 @@
 package edu.upc.dsa.models;
 
-import edu.upc.dsa.util.RandomUtils;
-
-import java.util.ArrayList;
 import java.util.List;
 
 
-public class Partida {
+public class Juego {
     List<Producto> productos;
     List<Equipo> equipos;
     String estado = "NO_INICIADO";
+    Integer tamanoEquipo;
 
-    public Partida(List<Producto> productos, List<Equipo> equipos) {
+    public Juego() {}
+    public Juego(List<Producto> productos, List<Equipo> equipos, int tamanoEquipo) {
         this.productos = productos;
         this.equipos = equipos;
+        this.tamanoEquipo = tamanoEquipo;
     }
 
-    // Métodos getter y setter para productos, equipos y estado
+    // Métodos getter y setter para productos, equipos, estado y tamañoEquipo
     public List<Producto> getProductos() {
         return productos;
     }
@@ -33,6 +33,18 @@ public class Partida {
         this.equipos = equipos;
     }
 
+    public int getTamanoEquipo() {
+        return tamanoEquipo;
+    }
+
+    public void setTamanoEquipo(int tamanoEquipo) {
+        this.tamanoEquipo = tamanoEquipo;
+    }
+
+    public int getNumeroEquipos() {
+        return equipos.size();
+    }
+
     public String getEstado() {
         return estado;
     }
@@ -40,4 +52,5 @@ public class Partida {
     public void setEstado(String estado) {
         this.estado = estado;
     }
+
 }
